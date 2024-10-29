@@ -24,10 +24,6 @@ namespace QRCodeGeneratorAPI.Controllers
                 return BadRequest("No file uploaded.");
             }
 
-            // Register your GdPicture license
-            LicenseManager licenseManager = new LicenseManager();
-            licenseManager.RegisterKEY("GDPicture License key goes here");
-
             using (var memoryStream = new MemoryStream())
             {
                 await pdfFile.CopyToAsync(memoryStream);
