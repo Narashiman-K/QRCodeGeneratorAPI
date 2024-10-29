@@ -1,6 +1,11 @@
 using Microsoft.AspNetCore.Http.Features;
-
+using GdPicture14;
 var builder = WebApplication.CreateBuilder(args);
+
+
+// Register your GdPicture license
+LicenseManager licenseManager = new LicenseManager();
+licenseManager.RegisterKEY("GDPicture License key goes here");
 
 // Add services to the container.
 
